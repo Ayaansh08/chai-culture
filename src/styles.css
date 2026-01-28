@@ -1,0 +1,413 @@
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+}
+
+body {
+  font-family: 'Cormorant Garamond', serif;
+  background: #080502;
+  color: #F7F3E9;
+  overflow-x: hidden;
+}
+
+/* INTRO SECTION (100vh) */
+.intro-section {
+  height: 100vh;
+  width: 100vw;
+  background: radial-gradient(ellipse at center, #1E130A 0%, #120A06 50%, #080502 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.intro-content { 
+  width: 90%; 
+  text-align: center; 
+  z-index: 20; 
+}
+
+.intro-title {
+  font-size: clamp(6rem, 16vw, 10rem);
+  font-weight: 700;
+  margin: 0 0 2rem 0;
+  line-height: 0.9;
+  background: linear-gradient(135deg, #D8C49F, #D4AF37, #C9A64D);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 4px 24px rgba(0,0,0,0.8);
+}
+
+.intro-subtitle {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 400;
+  color: #E8D4A0;
+  margin: 0 0 2rem 0;
+  letter-spacing: 0.15em;
+}
+
+.intro-divider {
+  height: 2px;
+  margin: 0 auto 2rem;
+  background: #C9A962;
+  border-radius: 1px;
+}
+
+.intro-text {
+  font-size: 1.25rem;
+  color: #F7F3E9;
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: 0.05em;
+}
+
+.intro-vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, transparent 50%, rgba(8,5,2,0.95) 90%);
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* SCROLLYTELLING SECTION (400vh) */
+.scrolly-section {
+  position: relative;
+  height: 400vh;
+  overflow: hidden;
+}
+
+/* BACKGROUND IMAGE - chai.png */
+.scrolly-bg {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background: 
+    linear-gradient(rgba(30,19,10,0.85), rgba(8,5,2,0.95)),
+    url('/chai.png') center/cover no-repeat fixed;
+  z-index: 1;
+  will-change: transform;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  z-index: 100;
+  background: rgba(8,5,2,0.9);
+  padding: 1rem 1.5rem;
+  border-radius: 50px;
+  border: 1px solid rgba(201,169,98,0.3);
+  backdrop-filter: blur(20px);
+}
+
+.nav-brand {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #D4AF37;
+  letter-spacing: 0.05em;
+}
+
+.nav-links a {
+  color: #E8D4A0;
+  text-decoration: none;
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover { 
+  color: #D4AF37; 
+}
+
+/* SCROLL STAGES */
+.scrolly-stages {
+  position: relative;
+  z-index: 20;
+  height: 100%;
+}
+
+.stage-1, .stage-2, .stage-3, .stage-4 {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 clamp(2rem, 5vw, 6rem);
+}
+
+.stage-content {
+  text-align: center;
+  max-width: 60ch;
+}
+
+/* STAGE 1: 0-20% - 1892 */
+.stage-1 h1 {
+  font-size: clamp(5rem, 14vw, 9rem);
+  font-weight: 700;
+  margin: 0 0 1.5rem 0;
+  background: linear-gradient(135deg, #D8C49F, #D4AF37);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 4px 32px rgba(0,0,0,0.8);
+  line-height: 0.9;
+}
+
+.stage-1 p {
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: #F2EDE3;
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* STAGE 2: 20-50% - Royal Indian Households */
+.stage-2 h2 {
+  font-size: clamp(3rem, 8vw, 5rem);
+  color: #E8D4A0;
+  margin: 0 0 1.5rem 0;
+  letter-spacing: 0.08em;
+  font-weight: 400;
+}
+
+.stage-2 p {
+  font-size: 1.3rem;
+  color: #F2EDE3;
+  font-weight: 300;
+  margin: 0;
+}
+
+/* STAGE 3: 50-80% - Instant. Elegant. Authentic. */
+.stage-3 h2 {
+  font-size: clamp(3rem, 8vw, 5rem);
+  color: #E8D4A0;
+  margin: 0 0 1.5rem 0;
+  letter-spacing: 0.08em;
+  font-weight: 400;
+}
+
+.stage-3 p {
+  font-size: 1.3rem;
+  color: #F2EDE3;
+  font-weight: 300;
+  margin: 0;
+}
+/* ================================
+   STAGE 4: COMING SOON + EMAIL
+   ================================ */
+
+.stage-4 {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 clamp(2rem, 5vw, 6rem);
+  position: relative;
+  z-index: 10;
+}
+
+.stage-4 .stage-content {
+  max-width: 42ch;
+  width: 100%;
+  text-align: center;
+}
+
+/* COMING SOON HEADING */
+.stage-4 h2 {
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  margin: 0 0 1.2rem 0;
+  color: #D4AF37;
+  text-transform: uppercase;
+}
+
+/* SOFT GOLD DIVIDER */
+.stage-4 .coming-divider {
+  width: 120px;
+  height: 2px;
+  margin: 0 auto 2rem;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #C9A962,
+    #E8D4A0,
+    #C9A962,
+    transparent
+  );
+  opacity: 0.8;
+}
+
+/* SUBTEXT */
+.stage-4 p {
+  font-size: 1.2rem;
+  color: #E8D4A0;
+  margin: 0 0 2.8rem 0;
+  font-weight: 300;
+  line-height: 1.7;
+  letter-spacing: 0.04em;
+}
+
+/* EMAIL SIGNUP */
+.email-signup {
+  display: flex;
+  gap: 1rem;
+  max-width: 420px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* INPUT */
+.email-input {
+  flex: 1;
+  min-width: 260px;
+  padding: 1.1rem 1.6rem;
+  background: rgba(15, 10, 6, 0.82);
+  border: 1.5px solid rgba(201, 169, 98, 0.45);
+  border-radius: 50px;
+  color: #F7F3E9;
+  font-size: 1rem;
+  font-family: inherit;
+  backdrop-filter: blur(14px);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.email-input::placeholder {
+  color: rgba(247, 243, 233, 0.55);
+}
+
+.email-input:focus {
+  outline: none;
+  border-color: #D4AF37;
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.18);
+}
+
+/* BUTTON */
+.email-btn {
+  background: linear-gradient(135deg, #D4AF37, #C9A962);
+  color: #1E130A;
+  border: none;
+  padding: 1.1rem 2.6rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 10px 28px rgba(212, 175, 55, 0.35);
+  font-family: inherit;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  white-space: nowrap;
+}
+
+.email-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 42px rgba(212, 175, 55, 0.45);
+}
+
+/* PROGRESS BAR */
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #D4AF37,
+    #C9A962,
+    transparent
+  );
+  transform-origin: left;
+  z-index: 100;
+  transition: transform 0.1s linear;
+}
+
+/* VIGNETTE OVERLAY */
+.scrolly-vignette {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 80% 60% at center,
+    transparent 40%,
+    rgba(8, 5, 2, 0.85) 85%
+  );
+  z-index: 5;
+  pointer-events: none;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .scrolly-section {
+    height: 500vh;
+  }
+
+  .email-signup {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .email-input {
+    min-width: 100%;
+  }
+
+  .email-btn {
+    width: 100%;
+  }
+}
+
+/* ROYAL INDIAN SCROLLBAR */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #D4AF37 rgba(8,5,2,0.9);
+}
+
+/* Chrome/Safari/Webkit */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(8,5,2,0.9);
+  border-radius: 10px;
+  border: 1px solid rgba(201,169,98,0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #D4AF37, #C9A962);
+  border-radius: 10px;
+  border: 2px solid rgba(212,175,55,0.3);
+  box-shadow: 
+    inset 0 0 4px rgba(255,255,255,0.2),
+    0 2px 8px rgba(0,0,0,0.4);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #E8C547, #D4AF37);
+  border-color: #E8C547;
+  box-shadow: 
+    inset 0 0 6px rgba(255,255,255,0.3),
+    0 4px 12px rgba(0,0,0,0.5);
+}/* GOLDEN DEFAULT CURSOR */
+ /* GOLDEN ROYAL POINTER ON INTERACTION */
+a:hover,
+button:hover,
+input:hover,
+input:focus {
+  cursor: url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'>\
+  <path d='M16 4 C18 10 24 12 28 16 C24 20 18 22 16 28 C14 22 8 20 4 16 C8 12 14 10 16 4 Z'\
+    fill='none' stroke='%23D4AF37' stroke-width='1.5'/>\
+  <circle cx='16' cy='16' r='2.5' fill='%23D4AF37'/>\
+</svg>") 16 16, pointer;
+}
+ 
