@@ -49,7 +49,7 @@ export default function ScrollVideoLanding() {
         <section className="stage stage-1">
           <div className="stage-content">
             <h1>1892</h1>
-            <p>Royal courts of Assam</p>
+            <p>When chai first found its place in Indian homes</p>
           </div>
         </section>
 
