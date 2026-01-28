@@ -1,16 +1,59 @@
-# React + Vite
+Chai Royale — Cinematic Scrollytelling Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a cinematic scrollytelling landing page built with React and CSS, designed to introduce a premium Indian chai brand through motion, depth, and storytelling.
 
-Currently, two official plugins are available:
+✨ Key Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Scroll-driven storytelling using native scroll progress
 
-## React Compiler
+Cinematic background with subtle parallax and depth
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Four narrative stages that transition smoothly like film scenes
 
-## Expanding the ESLint configuration
+Performance-first approach (no heavy animation libraries)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Royal Indian visual theme (gold, espresso, heritage tones)
+
+Responsive and accessible with reduced-motion support
+
+🛠️ Tech Stack
+
+React (component structure)
+
+CSS (GPU-accelerated transforms) for animation
+
+requestAnimationFrame for smooth scroll handling
+
+No external animation libraries (Framer / GSAP avoided intentionally)
+
+🧠 Implementation Approach
+
+Scroll position is mapped to a normalized progress value (0 → 1), which drives:
+
+Background scale and parallax
+
+Stage visibility, opacity, blur, and motion
+
+Progress indicator at the top
+
+All motion is handled via CSS variables, keeping React re-renders minimal and performance high.
+
+📱 Responsive Design
+
+Desktop: full cinematic scrollytelling experience
+
+Mobile: extended scroll length with simplified motion
+
+Respects prefers-reduced-motion
+
+🎯 Purpose
+
+Built as an internship assignment showcase to demonstrate:
+
+Advanced UI/UX thinking
+
+Scroll-based interaction design
+
+Performance-aware frontend engineering
+
+Visual storytelling without overengineering
